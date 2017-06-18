@@ -18,14 +18,15 @@ class BubbleSort
   def sort(coll)
     coll.length.times do
       index   = 0
-      prev    = coll[index]
-      current = coll[index + 1]
       (coll.length - 1).times do
-        if current && current < prev
+        prev    = coll[index]
+        current = coll[index + 1]
+        if current < prev
           coll[index], coll[index + 1] = coll[index + 1], coll[index]
         end
         index += 1
       end
     end
+    coll
   end
 end
