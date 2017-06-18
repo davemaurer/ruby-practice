@@ -18,4 +18,10 @@ describe BubbleSort do
     result = bs.sort([1, 3, 5, 2, 4])
     expect(result).to eq([1, 2, 3, 4, 5])
   end
+
+  it "sorts letters" do
+    bs = BubbleSort.new
+    result = bs.sort(%w(f a x e))
+    expect(result).to eq(%w(a e f x))
+  end
 end
