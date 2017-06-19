@@ -8,13 +8,13 @@ class InsertionSort
     sorted
   end
 
-  def insert_element(collection, num, i)
-    if num <= collection[i]
-      collection.insert(i, num)
+  def insert_element(collection, element, i)
+    if element <= collection[i]
+      collection.insert(i, element)
     elsif i == collection.length - 1
-      collection << num
+      collection << element
     else
-      insert_element(collection, num, i + 1)
+      insert_element(collection, element, i + 1)
     end
     collection
   end
