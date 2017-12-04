@@ -18,7 +18,7 @@ class BubbleSort
   #   coll
   # end
 
-# *** Using do loops only. No need to conditions but iterates whether needed or not.
+# *** Using do loops only. No need for conditionals but iterates whether needed or not.
 
   def sort(coll)
     coll.length.times do

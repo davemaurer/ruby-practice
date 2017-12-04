@@ -6,7 +6,7 @@ describe FiboRunner do
   let(:runner) {FiboRunner.calculate}
 
   it 'accepts user input' do
-    result = runner.calculate
+    result = FiboRunner.calculate
     input.puts '3'
     input.rewind
 

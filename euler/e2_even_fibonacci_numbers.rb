@@ -77,7 +77,7 @@ end
 
 
 # Benchmark for code executed with method defined outside of benchmark do block and called within it. Roughly same as
-# above being called without the method wrapper above.
+# being called without the method wrapper above.
 # user     system   total    real
 # 1.060000 0.010000 1.070000 (1.076584)
 

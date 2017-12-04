@@ -3,9 +3,10 @@ def fibo(n)
   prev = 0
   curr = 1
   n.times do
-    temp = curr
-    curr += prev
-    prev = temp
+    prev, curr = curr, prev + curr
+    # temp = curr
+    # curr += prev
+    # prev = temp
   end
   curr
 end
