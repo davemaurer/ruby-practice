@@ -16,4 +16,10 @@ describe StockManager do
 
     expect(result).to eq(-3)
   end
+
+  it "errors correctly when there are less than two prices" do
+    one_price = [5]
+
+    expect { sm.find_best_profit(one_price) }.to raise_error(ArgumentError)
+  end
 end

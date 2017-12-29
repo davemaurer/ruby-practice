@@ -9,6 +9,7 @@ Constraints: Stock must be bought before selling. Stock cannot be bought and sol
 
 class StockManager
   def find_best_profit(prices)
+    fail ArgumentError, "At least two prices are required" if prices.length < 2
     return negative_profit(prices) if lowest_price_is_last?(prices)
     profit(prices)
   end
