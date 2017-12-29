@@ -14,7 +14,7 @@ describe StockManager do
     different_prices = [12, 9, 7, 6, 3]
     result = sm.find_best_profit(different_prices)
 
-    expect(result).to eq(-3)
+    expect(result).to eq(-1)
   end
 
   it "errors correctly when there are less than two prices" do
