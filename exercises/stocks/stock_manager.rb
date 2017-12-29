@@ -8,12 +8,22 @@ Constraints: Stock must be bought before selling. Stock cannot be bought and sol
 =end
 
 class StockManager
-  def find_buy_points(prices)
-    prices[prices.index(prices.min)..-1]
+  def find_best_profit(prices)
+    return negative_profit(prices) if lowest_price_is_last?(prices)
+    profit(prices)
   end
 
-  def find_best_profit(prices)
-    min = find_buy_points(prices)[0]
-    find_buy_points(prices).max - min
+  def negative_profit(prices)
+    range = prices[0..-2]
+    prices.min - range.min
+  end
+
+  def profit(prices)
+    range = prices[prices.index(prices.min)..-1]
+    range.max - prices.min
+  end
+
+  def lowest_price_is_last?(prices)
+    prices[-1] == prices.min && prices.count { |p| p == prices.min } < 2
   end
 end
